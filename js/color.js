@@ -9,7 +9,7 @@ function red() {
 }
 
 function Black() {
-//   const a = document.getElementById("Black");
+  const a = document.getElementById("Black");
   document.body.style.backgroundColor = "black";
 
   document.getElementById("contact").style.backgroundColor = "black";
@@ -18,8 +18,8 @@ function Black() {
 }
 
 function Orange() {
-//   const a = document.getElementById("Orange");
-  document.body.style.backgroundColor = "Orange";
+  const a = document.getElementById("Orange");
+  document.body.style.backgroundColor = a;
 
   document.getElementById("contact").style.backgroundColor = "orange";
   document.getElementById("verbar").style.backgroundColor = "black";
@@ -27,7 +27,7 @@ function Orange() {
 }
 
 function Purple() {
-//   const a = document.getElementById("Purple");
+  const a = document.getElementById("Purple");
   document.body.style.backgroundColor = "Purple";
   document.getElementById("contact").style.backgroundColor = "purple";
   document.getElementById("verbar").style.backgroundColor = "black";
