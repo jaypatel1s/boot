@@ -25,15 +25,19 @@
           </p>
         </div>
       </nav>
+      
       <button
-        type="button"
-        class="btn mt-3 bg-success text-white"
-        onclick="AddNewRow()"
+      type="button"
+      class="btn mt-3 bg-success text-white"
+      onclick="AddNewRow()"
       >
-        Click Me
-      </button>
+Add Row    </button>
+     
 
-      <table class="table table-bordered mt-4 pt-4">
+  <form>
+
+
+      <table id="table" class="table table-bordered mt-4 pt-4">
         <thead>
           <tr>
             <!-- <th>Roll No</th> -->
@@ -49,6 +53,7 @@
         </thead>
         <tbody id="click"></tbody>
       </table>
+      </form>
     </div>
     <script src="./js/task3.js"></script>
     <script src="./js/popper.min.js"></script>

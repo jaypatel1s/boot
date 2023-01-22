@@ -4,25 +4,25 @@ function red() {
   document.body.style.backgroundColor = "red";
 
   document.getElementById("contact").style.backgroundColor = "red";
-  document.getElementById("verbar").style.backgroundColor = "black";
+  // document.getElementById("contact").style.backgroundColor = "black";
 
 }
 
 function Black() {
-  const a = document.getElementById("Black");
+  // const a = document.getElementById("Black");
   document.body.style.backgroundColor = "black";
 
   document.getElementById("contact").style.backgroundColor = "black";
-  document.getElementById("verbar").style.backgroundColor = "violet";
+  // document.getElementById("contact").style.backgroundColor = "violet";
 
 }
 
 function Orange() {
-  const a = document.getElementById("Orange");
-  document.body.style.backgroundColor = a;
+  // const a = document.getElementById("Orange");
+  document.body.style.backgroundColor = "orange";
 
   document.getElementById("contact").style.backgroundColor = "orange";
-  document.getElementById("verbar").style.backgroundColor = "black";
+  // document.getElementById("contact").style.backgroundColor = "black";
 
 }
 
@@ -30,7 +30,7 @@ function Purple() {
   const a = document.getElementById("Purple");
   document.body.style.backgroundColor = "Purple";
   document.getElementById("contact").style.backgroundColor = "purple";
-  document.getElementById("verbar").style.backgroundColor = "black";
+  // document.getElementById("contact").style.backgroundColor = "black";
 
 
 }
@@ -39,6 +39,6 @@ function Violet() {
 //   const a = document.getElementById("Violet");
   document.body.style.backgroundColor = "Violet";
   document.getElementById("contact").style.backgroundColor = "violet";
-  document.getElementById("verbar").style.backgroundColor = "black";
+  // document.getElementById("contact").style.backgroundColor = "black";
 }
 
