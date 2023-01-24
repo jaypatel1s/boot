@@ -25,19 +25,15 @@
           </p>
         </div>
       </nav>
-      
       <button
-      type="button"
-      class="btn mt-3 bg-success text-white"
-      onclick="AddNewRow()"
+        type="button"
+        class="btn mt-3 bg-success text-white"
+        onclick="AddNewRow()"
       >
-Add Row    </button>
-     
+        Add Row
+      </button>
 
-  <form>
-
-
-      <table id="table" class="table table-bordered mt-4 pt-4">
+      <table class="table table-bordered mt-4 pt-4" id="tb1">
         <thead>
           <tr>
             <!-- <th>Roll No</th> -->
@@ -53,8 +49,27 @@ Add Row    </button>
         </thead>
         <tbody id="click"></tbody>
       </table>
-      </form>
+      <table class="table table-bordered" id="table">
+        <thead>
+          <tr>
+            <th>No of Students</th>
+            <th>Avg Marks</th>
+            <th>Highest Marks</th>
+            <th>Lowest Marks</th>
+          </tr>
+        </thead>
+        <tbody id="tb2">
+          <tr>
+            <td id="st1"></td>
+            <td id="avg"></td>
+            <td id="max"></td>
+            <td id="min"></td>
+          </tr>
+        </tbody>
+      </table>
     </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
     <script src="./js/task3.js"></script>
     <script src="./js/popper.min.js"></script>
     <script src="./js/bootstrap.min.js"></script>

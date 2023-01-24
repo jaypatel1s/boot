@@ -1,73 +1,66 @@
-var sum=0;
+var sum = 0;
 
-var i=0;
+var i = 0;
 
-function AddNewRow(){
-  let h2 = document.getElementById("click");
+function AddNewRow() {
+  let h2 = $("#click");
 
-
-  
-sum++;
-i++;
-var table=
-  `<tr id="demo${i}"><td id="roll"> ${sum}</td><td><input type="text" id="txtname${i}" onchange="AddNewData(${i})"></td><td>
-  <input type="number" id="txtmaths${i}" minlength="1" maxlength="2"  onchange="AddNewData(${i})" ></td><td>
-  <input type="number" id="txtenglish${i}" onchange="AddNewData(${i})" ></td><td>
-  <input type="number" id="txtscience${i}" onchange="AddNewData(${i})"></td>
-  <td id="total${i}"></td>
- <td id="percentage${i}"></td><td> <button
- type="button"
- class="btn  bg-success text-white"
- onclick="DeleteRow(${sum})"
->
- Delete Row
-</button></td></tr>`
-    h2.insertAdjacentHTML("beforeend",table);  
-
-
-};
-
-    
-
-
-
-function AddNewData(index) {
-//   var maths=document.getElementById("txtmaths").value;
-//   var english=document.getElementById("txtenglish").value;
-//   var science=document.getElementById("txtscience").value;
-var j
-//   var total =Number(maths)+Number(english)+Number(science);
-
-//   document.getElementById("total").innerHTML=total;
-
-//   var percentage =Number(total/300)*100;
-//   document.getElementById("percentage").innerHTML=percentage;
-
-  for(j=1;j<=index;j++){
-    var maths=document.getElementById("txtmaths"+j).value;
-    var english=document.getElementById("txtenglish"+j).value;
-    var science=document.getElementById("txtscience"+j).value;
-    var total =Number(maths)+Number(english)+Number(science);
-
-    document.getElementById("total"+j).innerHTML=total;
-  
-    var percentage =Number(total/300)*100;
-    document.getElementById("percentage"+j).innerHTML=percentage;
-
-  }
-
- 
+  sum++;
+  i++;
+  var table = `<tr >
+  <td id="rollno">${sum}</td><td><input type="text" id="txtname${i}"  onchange="AddNewData(${i})" ></td>
+  <td><input type="number" id="txtmaths${i}"  onchange="AddNewData(${i})" ></td>
+  <td><input type="number" id="txtenglish${i}"  onchange="AddNewData(${i})" ></td>
+  <td><input type="number" id="txtscience${i}"  onchange="AddNewData(${i})"></td>
+  <td id="total${i}" class="TotalMarks"></td>
+  <td id="percentage${i}"></td>
+  </tr>`;
  
 
-}
-
-function DeleteRow(p){
-var element=document.getElementById("demo"+p);
-console.log(element)
-element.remove(p);
-i--;
-sum--;
+  $('h2#click').append(table);
 }
 
 
- 
+
+$("input").change(function(index)
+{
+  
+
+  var j;
+  for (j = 1; j <= index; j++) {
+    var maths = $("#txtmaths" + j).val();
+    var english = $("#txtenglish" + j).val()
+    var science =$("#txtscience" + j)[0]
+    var total = Number(maths) + Number(english) + Number(science);
+    $("#total" + j)[0];
+    var percentage = Number(total / 300) * 100;
+    $("percentage" + j).innerHTML = percentage;
+
+    var row = rollno.length == undefined ? 1: rollno.length;
+    $("st1").innerHTML = row;
+
+    const TotalMarks = $(".TotalMarks");
+    let TotalMarksArray = [];
+    TotalMarks.forEach((el) => {
+      TotalMarksArray.push(el.innerHTML);
+    });
+
+    TotalMarksArray.sort(function (a, b) {
+      return b - a;
+    });
+    $("#max")[0] = TotalMarksArray[0];
+
+    TotalMarksArray.sort(function (a, b) {
+      return a - b;
+    });
+    $("#min")[0] = TotalMarksArray[0];
+
+
+    const initial = 0;
+    const avg =
+      TotalMarksArray.reduce((a, b) => Number(a) + Number(b), initial) /
+      TotalMarksArray.length;
+    document.getElementById("avg").innerHTML = avg;
+  
+}
+})
